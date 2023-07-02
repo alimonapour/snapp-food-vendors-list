@@ -30,13 +30,18 @@ export const VendorCard = ({
         src={coverPhotoUrl}
         alt={`cover of "${restaurantTitle}"`}
       />
+      <img
+        src={logoUrl}
+        // alt={`cover of "${restaurantTitle}"`}
+        className={styles.cardLogo}
+      />
       <div className={styles.cardInfoContainer}>
         <div className={styles.cardInfo}>
           <div className={styles.cardTitleSection}>
             <h1 className={styles.cardTitle}>{restaurantTitle}</h1>
-            <h1 className={styles.cardRate}>{vendorRate}</h1>
+            <h4 className={styles.cardRate}>{vendorRate}</h4>
           </div>
-          <h2 className={styles.cardDescription}>{description}</h2>
+          <h4 className={styles.cardDescription}>{description}</h4>
           <h2 className={styles.cardDeliveryInfo}>
             <span>{deliveryType}</span> <span>{deliveryPrice} تومان</span>
           </h2>
