@@ -1,11 +1,14 @@
+import { Routes, Route } from "react-router-dom"
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
 import "./App.css"
+import { Home } from "./components/Home"
+import { VendorsList } from "./features/vendors-list/VendorsList"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
@@ -49,7 +52,12 @@ function App() {
             React Redux
           </a>
         </span>
-      </header>
+      </header> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/vendors-list" element={<VendorsList />} />
+      </Routes>
     </div>
   )
 }
