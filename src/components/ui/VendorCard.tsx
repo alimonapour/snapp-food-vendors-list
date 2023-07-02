@@ -1,34 +1,45 @@
+import styles from "./VendorCard.module.scss"
+
 type Props = {
-  artist: string
-  title: string
-  imageUrl: string
   restaurantTitle: string
-  logUrl: string
+  logoUrl: string
   coverPhotoUrl: string
-  vendorRate: number
+  vendorRate: number | string
   deliveryType: string
-  deliveryPrice: number
+  deliveryPrice: number | string
   description: string
 }
 
-export const Card = ({ artist, title, imageUrl }: Props) => {
+export const VendorCard = ({
+  restaurantTitle,
+  logoUrl,
+  coverPhotoUrl,
+  vendorRate,
+  deliveryType,
+  deliveryPrice,
+  description,
+}: Props) => {
   return (
-    <div className="rounded overflow-hidden shadow-lg">
+    <div className={styles.vendorCardContainer}>
       <div
-        className="w-full h-64 object-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${imageUrl})` }}
+        className={styles.cardCoverPhoto}
+        style={{ backgroundImage: `url(${coverPhotoUrl})` }}
       ></div>
       <img
-        className="w-full h-64 object-center bg-cover hidden"
-        src={imageUrl}
-        alt={`cover of "${title}" by ${artist}`}
+        className={styles.cardCoverImage}
+        src={coverPhotoUrl}
+        alt={`cover of "${restaurantTitle}"`}
       />
-      <div className="px-6 py-2">
-        <div className="flex flex-col items-center">
-          <h1 className="w-full text-center text-base tracking-tighter font-semibold">
-            {artist}
-          </h1>
-          <h2 className="text-sm tracking-tighter mt-1 text-center">{title}</h2>
+      <div className={styles.cardInfoContainer}>
+        <div className={styles.cardInfo}>
+          <div className={styles.cardTitleSection}>
+            <h1 className={styles.cardTitle}>{restaurantTitle}</h1>
+            <h1 className={styles.cardRate}>{vendorRate}</h1>
+          </div>
+          <h2 className={styles.cardDescription}>{description}</h2>
+          <h2 className={styles.cardDeliveryInfo}>
+            <span>{deliveryType}</span> <span>{deliveryPrice} تومان</span>
+          </h2>
         </div>
       </div>
     </div>
