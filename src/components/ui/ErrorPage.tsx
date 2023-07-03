@@ -1,4 +1,4 @@
-import styles from "./ErrorPgae.module.scss"
+import styles from "./ErrorPage.module.scss"
 export const ErrorPage = () => {
   return (
     <div className={styles.container}>
