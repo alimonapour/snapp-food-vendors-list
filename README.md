@@ -21,6 +21,7 @@ The Snapp food vendor list app was built with React, Typescript, Redux, and Redu
 - Redux Toolkit - The Redux Toolkit package is intended to be the standard way to write Redux logic.
 - Sass - Sass is the most mature, stable, and powerful professional-grade CSS extension language in the world.
 - React router - React Router is a JavaScript framework that lets us handle client and server-side routing in React applications.
+- Vite - Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.
 
 ## App Structure
 
