@@ -2,42 +2,42 @@
   font-family: iransans;
   font-style: normal;
   font-weight: normal;
-  src: url('../assets/fonts/IRANSansWeb.woff2') format('woff2');
+  src: url("../assets/fonts/IRANSansWeb.woff2") format("woff2");
 }
 
 @font-face {
   font-family: iransans;
   font-style: normal;
   font-weight: bold;
-  src: url('../assets/fonts/IRANSansWeb_Bold.woff2') format('woff2');
+  src: url("../assets/fonts/IRANSansWeb_Bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: iransans;
   font-style: normal;
   font-weight: lighter;
-  src: url('../assets/fonts/IRANSansWeb_Light.woff2') format('woff2');
+  src: url("../assets/fonts/IRANSansWeb_Light.woff2") format("woff2");
 }
 
 @font-face {
   font-family: roboto;
   font-style: normal;
   font-weight: normal;
-  src: url('../assets/fonts/robotoregular.woff2') format('woff2');
+  src: url("../assets/fonts/robotoregular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: roboto;
   font-style: normal;
   font-weight: bold;
-  src: url('../assets/fonts/robotobold.woff2') format('woff2');
+  src: url("../assets/fonts/robotobold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: roboto;
   font-style: normal;
   font-weight: lighter;
-  src: url('../assets/fonts/robotolight.woff2') format('woff2');
+  src: url("../assets/fonts/robotolight.woff2") format("woff2");
 }
 
 body,
@@ -53,6 +53,7 @@ input {
 
 body {
   direction: rtl;
+  background-color: #ebedf0;
 }
 
 h1,
@@ -71,19 +72,11 @@ h2 {
 }
 
 p {
+  font-size: 0.75em;
+  font-weight: medium;
   margin-bottom: 1.2em;
 }
 
 p strong {
   font-weight: bold;
-}
-
-.center-aligned {
-  text-align: center;
-}
-
-.section-header {
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-bottom: 1em;
 }

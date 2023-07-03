@@ -1,5 +1,4 @@
 .vendorsListContainer {
-  height: 100vh;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   padding: 0.5rem;
@@ -11,4 +10,20 @@
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .vendorsListContainer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vendorsListContainer {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 40%;
+    margin: 0 auto;
+  }
 }

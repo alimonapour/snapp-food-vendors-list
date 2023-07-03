@@ -1,6 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { fetchData } from "./vendorsListAPI"
 
+interface BadgeType {
+  description: string
+  image: string
+  title: string
+  white_image: string
+}
 interface VendorType {
   id: number
   title: string
@@ -8,8 +14,9 @@ interface VendorType {
   backgroundImage: string
   rate: number | string
   deliveryType: string
-  deliveryPrice: number | string
+  deliveryFee: number | string
   description: string
+  badges: BadgeType[]
 }
 
 interface DataType {

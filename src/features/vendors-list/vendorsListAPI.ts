@@ -12,8 +12,11 @@ export const fetchData = async (currentPageSize: number) => {
         long: 51.328,
       },
     })
+
     return response.data
   } catch (error) {
-    throw new Error("Error fetching data")
+    throw new Error(
+      "متاسفانه مشکلی پیش آمده است. لطفا دقایقی دیگر مراجعه نمایید.",
+    )
   }
 }

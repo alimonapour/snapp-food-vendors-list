@@ -6,6 +6,7 @@ import styles from "./VendorsList.module.scss"
 import { fetchVendorsAsync } from "./vendorsListSlice"
 import ScrollButton from "../../components/ui/ScrollToTopButton"
 import { VendorCardSkeleton } from "../../components/ui/VendorCardSkelton"
+import { ErrorPage } from "../../components/ui/ErrorPage"
 
 export const VendorsList: React.FC = () => {
   const observer = useRef<IntersectionObserver | null>(null)
@@ -55,7 +56,7 @@ export const VendorsList: React.FC = () => {
 
   return (
     <div className={styles.vendorsListContainer}>
-      {status === "failed" && <h1>{error}</h1>}
+      {status === "failed" && <ErrorPage />}
       {openVendorsCount && (
         <h1 className={styles.openVendorsCount}>
           {makeNumbersFarsi(openVendorsCount[0]?.data as any)}
@@ -72,9 +73,13 @@ export const VendorsList: React.FC = () => {
                   restaurantTitle={vendor.data.title}
                   logoUrl={vendor.data.logo}
                   coverPhotoUrl={vendor.data.backgroundImage}
-                  vendorRate={makeNumbersFarsi(vendor.data.rate)}
-                  deliveryType="اکسپرس"
-                  deliveryPrice={makeNumbersFarsi("20000")}
+                  vendorRate={vendor.data.rate}
+                  deliveryType={
+                    vendor.data.badges.length > 0
+                      ? "ارسال اکسپرس"
+                      : "پیک فروشنده"
+                  }
+                  deliveryPrice={vendor.data.deliveryFee}
                   description={vendor.data.description}
                 />
               </div>
@@ -87,14 +92,17 @@ export const VendorsList: React.FC = () => {
                 restaurantTitle={vendor.data.title}
                 logoUrl={vendor.data.logo}
                 coverPhotoUrl={vendor.data.backgroundImage}
-                vendorRate={makeNumbersFarsi(vendor.data.rate)}
-                deliveryType="اکسپرس"
-                deliveryPrice={makeNumbersFarsi("20000")}
+                vendorRate={vendor.data.rate}
+                deliveryType={
+                  vendor.data.badges.length > 0 ? "ارسال اکسپرس" : "پیک فروشنده"
+                }
+                deliveryPrice={vendor.data.deliveryFee}
                 description={vendor.data.description}
               />
             </div>
           )
         })}
+
       {status === "loading" && <VendorCardSkeleton />}
       <ScrollButton />
     </div>
