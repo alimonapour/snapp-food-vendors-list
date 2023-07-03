@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import logo from "./logo.svg"
 import { Counter } from "./features/counter/Counter"
 import "./App.css"
-import { Home } from "./components/Home"
+import { Home } from "./components/home/Home"
 import { VendorsList } from "./features/vendors-list/VendorsList"
 
 function App() {
