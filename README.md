@@ -37,7 +37,7 @@ The Snapp food vendor list app was built with React, Typescript, Redux, and Redu
 
 An app that shows the Snapp food vendors list created with React, Typescript, Redux, and Redux Toolkit, a single-page application that shows all vendors' titles, delivery types, delivery fees, and vendor rates.
 
-
+## Getting Started with Vite
 Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
 
 ```sh
