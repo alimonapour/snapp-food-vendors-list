@@ -3,6 +3,7 @@
 The Snapp food vendor list app was built with React, Typescript, Redux, and Redux Toolkit as a single-page application with vendor titles, delivery types, delivery fees, and vendor rates.
 
 ## Demo
+https://snapp-food-vendors-list.vercel.app
 
 ## Features
 
