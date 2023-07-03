@@ -24,24 +24,22 @@
   display: none;
 }
 
-.cardInfoContainer {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  // padding-top: 0.5rem;
-  // padding-bottom: 0.5rem;
-}
-
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-}
-
 .cardLogo {
   width: 4rem;
   height: 4rem;
   margin-top: -50px;
   border-radius: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.cardInfoContainer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
 }
 
 .cardTitleSection {

@@ -23,10 +23,11 @@ const ScrollButton = () => {
   window.addEventListener("scroll", toggleVisible)
 
   return (
-    <div className={styles.btnContainer}>
-      <button style={{ display: visible ? "inline" : "none" }}>
-        <FaArrowCircleUp onClick={scrollToTop} className={styles.btn} />
-      </button>
+    <div
+      className={styles.btnContainer}
+      style={{ display: visible ? "inline" : "none" }}
+    >
+      <FaArrowCircleUp onClick={scrollToTop} className={styles.btn} />
     </div>
   )
 }

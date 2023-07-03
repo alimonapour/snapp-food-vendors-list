@@ -5,6 +5,7 @@ import { makeNumbersFarsi } from "../../utils/makeNumbersFarsi"
 import styles from "./VendorsList.module.scss"
 import { fetchVendorsAsync } from "./vendorsListSlice"
 import ScrollButton from "../../components/ui/ScrollToTopButton"
+import { VendorCardSkeleton } from "../../components/ui/VendorCardSkelton"
 
 export const VendorsList: React.FC = () => {
   const observer = useRef<IntersectionObserver | null>(null)
@@ -54,13 +55,13 @@ export const VendorsList: React.FC = () => {
 
   return (
     <div className={styles.vendorsListContainer}>
-      {status === "loading" && <h1>loading......</h1>}
       {status === "failed" && <h1>{error}</h1>}
       {openVendorsCount && (
         <h1 className={styles.openVendorsCount}>
           {makeNumbersFarsi(openVendorsCount[0]?.data as any)}
         </h1>
       )}
+
       {vendorsListItems &&
         vendorsListItems.map((vendor, index) => {
           if (index === vendorsListItems.length - 1) {
@@ -94,6 +95,7 @@ export const VendorsList: React.FC = () => {
             </div>
           )
         })}
+      {status === "loading" && <VendorCardSkeleton />}
       <ScrollButton />
     </div>
   )
