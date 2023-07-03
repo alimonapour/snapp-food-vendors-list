@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { FaArrowCircleUp } from 'react-icons/fa'
-
+import { useState } from "react"
+import { FaArrowCircleUp } from "react-icons/fa"
+import styles from "./ScrollToTop.module.scss"
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false)
 
@@ -16,19 +16,16 @@ const ScrollButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     })
   }
 
-  window.addEventListener('scroll', toggleVisible)
+  window.addEventListener("scroll", toggleVisible)
 
   return (
-    <div className='relative'>
-      <button className='fixed bottom-8 right-3 h-16 w-16 text-5xl cursor-pointer text-gray-900 hover:animate-bounce'>
-        <FaArrowCircleUp
-          onClick={scrollToTop}
-          style={{ display: visible ? 'inline' : 'none' }}
-        />
+    <div className={styles.btnContainer}>
+      <button style={{ display: visible ? "inline" : "none" }}>
+        <FaArrowCircleUp onClick={scrollToTop} className={styles.btn} />
       </button>
     </div>
   )

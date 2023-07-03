@@ -4,6 +4,7 @@ import { VendorCard } from "../../components/ui/VendorCard"
 import { makeNumbersFarsi } from "../../utils/makeNumbersFarsi"
 import styles from "./VendorsList.module.scss"
 import { fetchVendorsAsync } from "./vendorsListSlice"
+import ScrollButton from "../../components/ui/ScrollToTopButton"
 
 export const VendorsList: React.FC = () => {
   const observer = useRef<IntersectionObserver | null>(null)
@@ -93,6 +94,7 @@ export const VendorsList: React.FC = () => {
             </div>
           )
         })}
+      <ScrollButton />
     </div>
   )
 }
